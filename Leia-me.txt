@@ -1,0 +1,1 @@
+Não subir para o servidor a pasta git e a pasta documentação

@@ -1051,7 +1051,7 @@ h32{
 .img_foto_pequena{
 
     width: 100%; 
-    height: 160px; 
+    height: 100px; 
     object-fit:cover; 
     border-radius: 5px;
     cursor: pointer;
@@ -1060,7 +1060,7 @@ h32{
 
 .img_foto_pequena:hover{
 
-    height: 180px;
+    height: 110px;
     cursor: pointer;
 
 }

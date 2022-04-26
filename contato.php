@@ -44,10 +44,7 @@
 
                 </div>
 
-            </form>
-
-            
-
+            </form>        
 
 <script>
 

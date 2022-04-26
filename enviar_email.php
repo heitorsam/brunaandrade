@@ -9,9 +9,9 @@ $email_celular = $_POST['celular'];
 $email_email = $_POST['email'];
 $email_mensagem = $_POST['mensagem'];
 
-$nome = "Espaço Feng Shui";
-$email = "contato@espacofengshui.com.br";
-$assunto = "Contato Espaço Feng Shui - $email_nome";
+$nome = "Bruna Andrade Arquitetura";
+$email = "arquiteta@brunaanadrade.com.br";
+$assunto = "Contato Bruna Andrade Arquitetura - $email_nome";
 $msg = "Olá Bruna! <br><br>
 
 Você recebeu uma nova mensagem:<br><br>
@@ -25,13 +25,13 @@ Mensagem: $email_mensagem <br>
 	
 Obs.: Funcionalidade desenvolvida por Heitor Scalabrini.<br><br>
 
-E-mail enviado automaticamente atraves do site espacofengshui.com.br <br><br>
+E-mail enviado automaticamente atraves do site brunaanadrade.com.br <br><br>
 
 Atenciosamente,
 
-<br><br><br>
-	
-<img src='https://kpi.santacasasjc.com.br/img/santa_casa_sjc.gif' style='width: 20%; height: 16%;'>
+</br></br>
+
+Bruna Andrade Arquitetura
 
 </br></br>";
 
@@ -42,9 +42,9 @@ if (PATH_SEPARATOR ==":") { $quebra = "\r\n"; }
 else { $quebra = "\n"; }	
 $headers = "MIME-Version: 1.1".$quebra;	
 $headers .= "Content-type: text/plain; charset=iso-8859-1".$quebra;	
-$headers .= "From: envioautomatico@espacofengshui.com.br".$quebra; 
+$headers .= "From: envioautomatico@brunaandrade.com.br".$quebra; 
 //E-mail do remetente	
-$headers .= "Return-Path: envioautomatico@espacofengshui.com.br".$quebra; 
+$headers .= "Return-Path: envioautomatico@brunaandrade.com.br".$quebra; 
 				   
 // Chame o arquivo com as Classes do PHPMailer
 require_once('phpmailer/class.phpmailer.php');
@@ -54,21 +54,21 @@ $mail = new PHPMailer();
 	
 // Configuração dos dados do servidor e tipo de conexão (Estes dados você obtem com seu host)
 $mail->IsSMTP(); // Define que a mensagem será SMTP
-$mail->Host = "mail.espacofengshui.com.br"; // Endereço do servidor SMTP
+$mail->Host = "mail.brunaandrade.com.br"; // Endereço do servidor SMTP
 $mail->Port = 587;
 $mail->CharSet = 'UT-8';
 $mail->SMTPAuth = true; // Autenticação (True: Se o email será autenticado | False: se o Email não será autenticado)
-$mail->Username = 'envioautomatico@espacofengshui.com.br'; // Usuário do servidor SMTP
+$mail->Username = 'envioautomatico@brunaandrade.com.br'; // Usuário do servidor SMTP
 $mail->Password = 'envioautomatico@99'; // A Senha do email indicado acima
 // Remetente (Identificação que será mostrada para quem receber o email)
-$mail->From = "envioautomatico@espacofengshui.com.br";
-$mail->FromName = "Contato Espaço Feng Shui - $email_nome";
+$mail->From = "envioautomatico@brunaandrade.com.br";
+$mail->FromName = "Contato Bruna Andrade Arquitetura - $email_nome";
 	
 // Destinatário
 $mail->AddAddress($email, $nome);
 
 // Opcional (Se quiser enviar cópia do email)
-$mail->AddBCC('contato@brunaandrade.com.br', 'Copia Oculta');
+$mail->AddBCC('arquiteta@brunaandrade.com.br', 'Copia Oculta');
 $mail->AddBCC('brunabett@hotmail.com', 'Copia Oculta');
 $mail->AddBCC('scalabrinih@gmail.com', 'Copia Oculta');
 

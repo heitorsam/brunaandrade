@@ -13,24 +13,24 @@
       </ol>
       <div class="carousel-inner banner_padrao">
         <div class="carousel-item active banner_padrao" data-interval="5000">
-          <img src="img/banners/home/banner_espaco_feng_shui_01.webp" alt="Consultoria Feng Shui" class="d-block w-100 banner_padrao" alt="Alt Banner 1">
+          <img src="img/banners/home/bruna_andrade_arquitetura_01.webp" alt="Consultoria Feng Shui" class="d-block w-100 banner_padrao" alt="Alt Banner 1">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Consultoria Feng Shui</h5>
-            <p class="p_banner";>Atraía harmonia e prosperidade com o Feng Shui</p>
+            <h5>Arquitetura</h5>
+            <p class="p_banner";>Projetos alinhados ao propósito do cliente</p>
           </div>
         </div>
         <div class="carousel-item banner_padrao" data-interval="5000">
-          <img src="img/banners/home/banner_espaco_feng_shui_02.webp" alt="Consultoria Astrologia" class="d-block w-100 banner_padrao" alt="Alt Banner 2">
+          <img src="img/banners/home/bruna_andrade_arquitetura_02.webp" alt="Consultoria Astrologia" class="d-block w-100 banner_padrao" alt="Alt Banner 2">
           <div class="carousel-caption d-none d-md-block">
-          <h5>Consultoria Feng Shui</h5>
-            <p class="p_banner";>Utilize os benefícios da ciência do baguá com o Feng Shui</p>
+          <h5>Design de Interiores</h5>
+            <p class="p_banner";>Traga conforto e bem-estar para sua casa</p>
           </div>
         </div>
         <div class="carousel-item banner_padrao" data-interval="5000">
-          <img src="img/banners/home/banner_espaco_feng_shui_03.webp" alt="Feng Shui" class="d-block w-100 banner_padrao" alt="Alt Banner 3">
+          <img src="img/banners/home/bruna_andrade_arquitetura_03.webp" alt="Feng Shui" class="d-block w-100 banner_padrao" alt="Alt Banner 3">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Consultoria Astrologia</h5>
-            <p class="p_banner";>Obtenha autoconhecimento através do Mapa Astral</p>
+            <h5>Projetos Comerciais</h5>
+            <p class="p_banner";>Melhore seu ambiente de trabalho e atraia novos clientes</p>
           </div>
         </div>
       </div>

@@ -41,10 +41,10 @@
             
     ?>
 
-            <div class="col-6 col-md-3 col-lg-2 col-sm-6" style="background-color: #f9f9f9 !important;">
+            <div class="col-4 col-md-2 col-lg-2 col-sm-6" style="background-color: #f9f9f9 !important;">
 
                 <!--IMAGEM 01-->
-                <a style="height: 30px !important; padding: 0px 6px 0px 6px;" 
+                <a style="height: 20px !important; padding: 0px 6px 0px 6px;" 
                 data-toggle="modal" data-target="#detalhejust<?php echo $contador;?>">
 
                     <img src="<?php echo $imagem;?>" alt="Feng Shui" class="img_foto_pequena">  

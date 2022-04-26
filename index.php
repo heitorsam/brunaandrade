@@ -19,16 +19,13 @@
     <h11><i class="fa fa-walking" aria-hidden="true"></i> Sobre</h11>
     <div class="div_br"></div>
     <div class="div_br"></div>
-    O <b style="color: #3d3d3d;">Feng Shui</b> é uma ciência e arte Chinesa de origem filosófica Taoista, que têm por objetivo organizar os espaços a fim de atrair influências benéficas da Natureza.
+    Arquiteta formada pela Belas Artes, focada em arquitetura e design de interiores
+    tanto residencial como comercial. Realizo consultorias presenciais e a distância, projetos de interiores, arquitetônicos, design de moveis e comunicação visual.
     <div class="div_br"></div>
-
-    Com o <b style="color: #3d3d3d;">Feng Shui</b> é possível melhorar várias áreas da sua vida, como: família, amigos, prosperidade, relacionamentos, saúde, sabedoria, sucesso, criatividade e trabalho.
+    Trabalho com o alinhamento entre o gosto do cliente e a orientação do arquiteto de forma que o projeto seja único, esteticamente harmônico e funcional.
     <div class="div_br"></div>
+    CAU: Nº A136398-0
 
-    Ao aplicar o <b style="color: #3d3d3d;">Feng Shui</b>, é perceptível a melhora no ânimo/disposição dos moradores e o surgimento de oportunidades na vida pessoal e profissional, descoberta de talentos, melhoras na saúde e bem estar.
-    <div class="div_br"></div>
-
-    O <b style="color: #ed6a6e;">Espaço Feng Shui</b> conta com profissionais arquitetos especializados em <b style="color: #3d3d3d;">Feng Shui</b> e em outras áreas do autoconhecimento. Possibilitando assim a excelência de nossos serviços.
 
 </div>
 

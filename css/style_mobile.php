@@ -191,6 +191,25 @@
 		width: auto !important;
 	}
 
+	/*GALERIA*/
+
+	.img_foto_pequena{
+
+	width: 100%; 
+	height: 50px; 
+	object-fit:cover; 
+	border-radius: 5px;
+	cursor: pointer;
+
+	}
+
+	.img_foto_pequena:hover{
+
+	height: 60px;
+	cursor: pointer;
+
+	}
+
 }
 
 </style>

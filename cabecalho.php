@@ -11,13 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="img/logo/espaco_feng_shui.webp">
+    <link rel="icon" href="img/logo/bruna_andrade_arquitetura.webp">
 
     <!--SEO-->
-    <title>Espaço Feng Shui</title>   
+    <title>Bruna Andrade Arquitetura</title>   
     <meta name="author" content="Heitor Scalabrini">
-    <meta name="keywords" content="feng shui, espaço feng shui, consultoria feng shui, numerologia, astrologia, consultoria astorlogia">
-    <meta name="description" content="Consultorias presenciais e a distância de Feng Shui, Numerologia e Astrologia." />
+    <meta name="keywords" content="arquiterura, arquiteta, arquiteto, arquitetura sjc, arquitetura sp, arquiteta sp, arquiteta sjc, design de interiores">
+    <meta name="description" content="Projetos residenciais e comerciais personalizados presenciais ou a distância." />
     
     <!--CSS-->
     <?php 
@@ -39,9 +39,9 @@
     <header>    
 
         <nav class="navbar navbar-expand-md navbar-dark bg-color" style="width: 100% !important; background-color: #ffffff;">
-            <a class="navbar-brand" href="index.php" style="color: #3d3d3d; font-family: 'sans-serif', 'arial';">
-                <img class="logo_site" src="img/logo/espaco_feng_shui.webp" alt="Espaço Feng Shui" class="d-inline-block align-top">
-                 Espaço Feng Shui 
+            <a class="navbar-brand" href="index.php" style="font-size: 15px; color: #3d3d3d; font-family: 'sans-serif', 'arial';">
+                <img class="logo_site" src="img/logo/bruna_andrade_arquitetura.webp" alt="Bruna Andrade Arquitetura" class="d-inline-block align-top">
+                 Bruna Andrade
             </a>
 
             <div class="justify-content-end menu_largura" style="padding-top: 10px; padding-bottom: 10px;">
@@ -56,11 +56,11 @@
 
                 <span class="espaco_pequeno" style="width: 10px;" ></span>
                 
-                <h32><a class="div-social" href="https://www.instagram.com/espacofengshui/" target="_blank"><i class="fab fa-instagram"></i></a></h32>
-                <h32><a class="div-social" href="https://www.facebook.com/espacofengshui/" target="_blank"><i class="fab fa-facebook"></i></a></h32>
+                <h32><a class="div-social" href="https://www.instagram.com/bruna_arqui/" target="_blank"><i class="fab fa-instagram"></i></a></h32>
+                <h32><a class="div-social" href="https://www.facebook.com/arquitetabruna/" target="_blank"><i class="fab fa-facebook"></i></a></h32>
                 
-                <a class="div-social" href="https://api.whatsapp.com/send?phone=5511967000853&text=Ol%C3%A1!%20Gostaria%20de%20entra%20em%20contato!" target="_blank">
-                <i class="fab fa-whatsapp"></i> (11) 96700-0853
+                <a class="div-social" href="https://api.whatsapp.com/send?phone=5512981428757&text=Ol%C3%A1!%20Gostaria%20de%20entra%20em%20contato!" target="_blank">
+                <i class="fab fa-whatsapp"></i> (12) 98142-8757
                 </a>            
             
             </div>         

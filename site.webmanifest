@@ -1,0 +1,11 @@
+{
+    "name": "Bruna Andrade Arquitetura e Design",
+    "short_name": "Bruna Andrade",
+    "icons": [
+        { "src": "assets/images/site/favicon-192.png", "sizes": "192x192", "type": "image/png" }
+    ],
+    "theme_color": "#3a332e",
+    "background_color": "#f5f0e8",
+    "display": "browser",
+    "lang": "pt-BR"
+}

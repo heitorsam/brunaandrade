@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /enviar_email.php
+Disallow: /phpmailer/
+Disallow: /V1/
+
+Sitemap: https://brunaarq.com.br/sitemap.xml

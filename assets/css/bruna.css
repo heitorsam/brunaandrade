@@ -1,0 +1,944 @@
+/*--------------------------------------------------------------
+    Bruna Andrade Arquitetura e Design
+    Personalização do tema unfinity Plus (home "minimal portfolio")
+    Paleta extraída da logo: creme, marrom-escuro e bronze.
+--------------------------------------------------------------*/
+:root {
+  --ba-brown: #3a332e;
+  --ba-brown-dark: #26211d;
+  --ba-bronze: #a8876a;
+  --ba-bronze-dark: #8c6d52;
+  --ba-cream: #f5f0e8;
+  --ba-cream-dark: #ebe3d7;
+  --ba-text: #5f5750;
+  --ba-whatsapp: #25d366;
+}
+
+/*** base ***/
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--ba-text);
+}
+
+p, ul, li {
+  color: var(--ba-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.minimal-portfolio-section-title h2 {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  color: var(--ba-brown);
+}
+
+a {
+  color: var(--ba-bronze-dark);
+}
+
+a:hover, a:focus {
+  color: var(--ba-brown);
+}
+
+::selection {
+  background: var(--ba-bronze);
+  color: #fff;
+}
+
+/*** section title ***/
+.minimal-portfolio-section-title h2 {
+  letter-spacing: 0.06em;
+}
+
+.minimal-portfolio-section-title h2:before,
+.minimal-portfolio-section-title h2:after {
+  background-color: var(--ba-bronze);
+  height: 2px;
+}
+
+/*** buttons ***/
+.minimal-portfolio-theme-btn,
+.minimal-portfolio-theme-btn-s2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  background-color: var(--ba-brown);
+  transition: background-color 0.3s;
+}
+
+.minimal-portfolio-theme-btn:hover,
+.minimal-portfolio-theme-btn-s2:hover,
+.minimal-portfolio-theme-btn:focus,
+.minimal-portfolio-theme-btn-s2:focus {
+  background-color: var(--ba-bronze-dark);
+  color: #fff;
+}
+
+.minimal-portfolio-theme-btn .fa,
+.minimal-portfolio-theme-btn-s2 .fa {
+  margin-right: 6px;
+  font-size: 1.2em;
+}
+
+/*** preloader: desativado (atrasava a exibição da página e piorava o LCP).
+     O elemento continua no HTML porque o script do tema inicia o slider
+     no callback do fadeOut dele. ***/
+.preloader {
+  display: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.section-intro {
+  margin: -25px 0 40px;
+  font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+    header
+--------------------------------------------------------------*/
+.portfolio-header .navigation,
+.portfolio-header .sticky-header {
+  background-color: #fff;
+}
+
+.portfolio-header .sticky-header {
+  box-shadow: 0 2px 18px rgba(58, 51, 46, 0.12);
+}
+
+.site-header .site-logo img {
+  height: 54px;
+  width: auto;
+}
+
+@media (max-width: 991px) {
+  .site-header .site-logo img {
+    height: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header .site-logo img {
+    height: 34px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .portfolio-header #navbar {
+    margin-right: 0;
+  }
+
+  .portfolio-header #navbar > ul > li {
+    padding: 38px 0;
+  }
+
+  .portfolio-header #navbar > ul > li:after {
+    color: var(--ba-cream-dark);
+  }
+
+  .portfolio-header #navbar > ul > li > a,
+  .portfolio-header .sticky-header #navbar > ul > li > a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8f857c;
+    padding: 0 22px;
+  }
+
+  .portfolio-header #navbar > ul > li > a:hover,
+  .portfolio-header #navbar > ul > li.current-menu-item > a,
+  .portfolio-header .sticky-header #navbar > ul > li > a:hover,
+  .portfolio-header .sticky-header #navbar > ul > li.current-menu-item > a {
+    color: var(--ba-brown);
+  }
+
+  .portfolio-header #navbar .dots span {
+    background-color: var(--ba-bronze);
+  }
+
+  .portfolio-header #navbar > ul > li.current-menu-item .dots {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .portfolio-header #navbar > ul > li > a,
+  .portfolio-header .sticky-header #navbar > ul > li > a {
+    padding: 0 14px;
+  }
+
+  .site-header .site-logo img {
+    height: 46px;
+  }
+}
+
+.portfolio-header .navbar-header button,
+.portfolio-header #navbar .close-navbar {
+  background-color: var(--ba-brown);
+}
+
+@media (max-width: 991px) {
+  .portfolio-header .navigation {
+    border-bottom: 1px solid var(--ba-cream-dark);
+  }
+
+  .portfolio-header #navbar > ul > li > a {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+  }
+
+  .portfolio-header #navbar .dots {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+    hero
+--------------------------------------------------------------*/
+.portfolio-hero-slider .slide:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(38, 33, 29, 0.25) 0%, rgba(38, 33, 29, 0.55) 100%);
+  z-index: 1;
+}
+
+.portfolio-hero-slider .slide .container {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero-slider .slide-caption {
+  margin-top: 0;
+}
+
+.portfolio-hero-slider .slide-caption .slide-kicker,
+.portfolio-hero-slider .slide-caption .slide-title {
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+
+.portfolio-hero-slider .slide-caption .slide-kicker {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 0 0 1.2em;
+}
+
+.portfolio-hero-slider .slide-caption .slide-title {
+  font-family: "Marcellus", serif;
+  font-size: 50px;
+  line-height: 1.2;
+  margin: 0 0 0.69em;
+}
+
+/* animação de entrada (mesma do tema, aplicada às novas classes) */
+.portfolio-hero-slider .slick-list .slick-current .slide-caption > .slide-kicker {
+  animation: fadeInLeftSlow 1.5s 0.8s forwards;
+}
+
+.portfolio-hero-slider .slick-list .slick-current .slide-caption > .slide-title {
+  animation: fadeInLeftSlow 1.5s 1.4s forwards;
+}
+
+/* antes do slider iniciar: mostra só o 1º slide, já com o texto visível */
+.hero-slider:not(.slick-initialized) .slide + .slide {
+  display: none;
+}
+
+.hero-slider:not(.slick-initialized) .slide-caption > * {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .portfolio-hero-slider .slide-caption .slide-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-hero-slider .slide-caption .slide-kicker {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+
+  .portfolio-hero-slider .slide-caption .slide-title {
+    font-size: 28px;
+  }
+
+  .portfolio-hero-slider .slide-caption .slide-title br {
+    display: none;
+  }
+}
+
+.portfolio-hero-slider .text-dots span {
+  background-color: var(--ba-bronze);
+}
+
+.portfolio-hero-slider .slick-prev,
+.portfolio-hero-slider .slick-next {
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 5;
+}
+
+.portfolio-hero-slider .slick-prev:before,
+.portfolio-hero-slider .slick-next:before {
+  color: var(--ba-brown);
+}
+
+.hero .slick-dots {
+  z-index: 5;
+}
+
+/*--------------------------------------------------------------
+    sobre
+--------------------------------------------------------------*/
+.minimal-portfolio-about-section {
+  background-color: var(--ba-cream);
+}
+
+.minimal-portfolio-about-section .about-text p {
+  font-size: 16px;
+  line-height: 1.9em;
+}
+
+.minimal-portfolio-about-section .about-text .about-lead {
+  font-family: "Marcellus", serif;
+  font-size: 22px;
+  line-height: 1.5em;
+  color: var(--ba-brown);
+}
+
+.minimal-portfolio-about-section .about-text .about-lead strong {
+  font-weight: 400;
+  color: var(--ba-bronze-dark);
+}
+
+@media screen and (min-width: 992px) {
+  .minimal-portfolio-about-section .about-text {
+    padding-right: 60px;
+  }
+}
+
+.minimal-portfolio-about-section .work-skills {
+  padding-right: 0;
+}
+
+.minimal-portfolio-about-section .work-skills .fa {
+  font-size: 28px;
+  color: var(--ba-bronze);
+}
+
+.minimal-portfolio-about-section .work-skills .skill-label {
+  margin: 17px 0 0;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: var(--ba-brown);
+}
+
+@media (max-width: 767px) {
+  .minimal-portfolio-about-section .work-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .minimal-portfolio-about-section .work-skills li {
+    float: none;
+    width: 33.33%;
+    padding: 0 5px;
+    margin-bottom: 25px;
+  }
+
+  .minimal-portfolio-about-section .about-pic {
+    margin-right: 12px;
+  }
+
+  .minimal-portfolio-about-section .about-pic:before {
+    top: 12px;
+    left: 12px;
+    right: -12px;
+    bottom: -12px;
+  }
+}
+
+.minimal-portfolio-about-section .about-pic {
+  position: relative;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.minimal-portfolio-about-section .about-pic:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid var(--ba-bronze);
+}
+
+.minimal-portfolio-about-section .about-pic img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(58, 51, 46, 0.15);
+}
+
+/*--------------------------------------------------------------
+    serviços
+--------------------------------------------------------------*/
+.ba-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ba-services-grid:before,
+.ba-services-grid:after {
+  display: none;
+}
+
+.ba-services-grid > .col {
+  margin-bottom: 30px;
+}
+
+.ba-service {
+  height: 100%;
+  padding: 38px 32px;
+  border: 1px solid var(--ba-cream-dark);
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.ba-service:hover {
+  border-color: var(--ba-bronze);
+  box-shadow: 0 12px 30px rgba(58, 51, 46, 0.08);
+  transform: translateY(-4px);
+}
+
+.ba-service .fa {
+  font-size: 30px;
+  color: var(--ba-bronze);
+  margin-bottom: 20px;
+}
+
+.ba-service h3 {
+  font-size: 20px;
+  margin: 0 0 0.7em;
+}
+
+.ba-service p {
+  margin: 0;
+}
+
+.ba-service-featured {
+  margin-top: 30px;
+  background-color: var(--ba-brown);
+  overflow: hidden;
+}
+
+.ba-service-featured .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ba-service-featured .row:before,
+.ba-service-featured .row:after {
+  display: none;
+}
+
+.ba-service-featured .featured-pic {
+  margin: 30px 0 30px 15px;
+  background-color: #fff;
+}
+
+.ba-service-featured .featured-pic img {
+  width: 100%;
+  height: auto;
+}
+
+.ba-service-featured .featured-text {
+  padding: 40px 40px 40px 20px;
+}
+
+.ba-service-featured .featured-tag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ba-bronze);
+  margin-bottom: 12px;
+}
+
+.ba-service-featured h3 {
+  color: #fff;
+  font-size: 28px;
+  margin: 0 0 0.8em;
+}
+
+.ba-service-featured p {
+  color: #d9d0c6;
+}
+
+.ba-service-featured .minimal-portfolio-theme-btn {
+  margin-top: 10px;
+  background-color: var(--ba-bronze);
+}
+
+.ba-service-featured .minimal-portfolio-theme-btn:hover {
+  background-color: #fff;
+  color: var(--ba-brown);
+}
+
+@media (max-width: 991px) {
+  .ba-service-featured .col {
+    width: 100%;
+  }
+
+  .ba-service-featured .featured-pic {
+    margin: 15px 0 0;
+  }
+
+  .ba-service-featured .featured-text {
+    padding: 30px 15px;
+  }
+
+  .ba-service-featured h3 {
+    font-size: 22px;
+  }
+}
+
+.ba-region {
+  text-align: center;
+  margin: 40px 0 0;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--ba-brown);
+}
+
+.ba-region .fa {
+  color: var(--ba-bronze);
+  margin-right: 6px;
+}
+
+/*--------------------------------------------------------------
+    portfólio
+--------------------------------------------------------------*/
+.minimal-portfolio-portfolio-section {
+  background-color: var(--ba-cream);
+}
+
+/* os filtros ficam abaixo do título (são mais longos que os do template) */
+.minimal-portfolio-portfolio-section .portfolio-list {
+  position: static;
+  margin-bottom: 35px;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list li {
+  float: none;
+  margin: 0;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list ul > li + li {
+  margin-left: 0;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list li:after {
+  display: none;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list a {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--ba-text);
+  padding: 9px 16px;
+  border: 1px solid var(--ba-cream-dark);
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list a:hover {
+  border-color: var(--ba-bronze);
+  color: var(--ba-brown);
+}
+
+.minimal-portfolio-portfolio-section .portfolio-list a.current {
+  background-color: var(--ba-brown);
+  border-color: var(--ba-brown);
+  color: #fff;
+}
+
+.minimal-portfolio-portfolio-section .img-holder a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.minimal-portfolio-portfolio-section .img-holder img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
+}
+
+.minimal-portfolio-portfolio-section .img-holder .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 40px 18px 14px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(38, 33, 29, 0) 0%, rgba(38, 33, 29, 0.8) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s;
+}
+
+.minimal-portfolio-portfolio-section .img-holder a:hover img {
+  transform: scale(1.05);
+}
+
+.minimal-portfolio-portfolio-section .img-holder a:hover .caption,
+.minimal-portfolio-portfolio-section .img-holder a:focus .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .minimal-portfolio-portfolio-section .img-holder .caption {
+    opacity: 1;
+    transform: none;
+    font-size: 11px;
+    padding: 24px 10px 8px;
+  }
+}
+
+.mfp-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*--------------------------------------------------------------
+    um projeto pensado para você
+--------------------------------------------------------------*/
+.ba-approach-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ba-approach-section .row:before,
+.ba-approach-section .row:after {
+  display: none;
+}
+
+.ba-approach-section .approach-pic img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 14px 40px rgba(58, 51, 46, 0.18);
+}
+
+.ba-approach-section .approach-text {
+  padding-left: 40px;
+}
+
+.ba-approach-section .approach-text p {
+  font-family: "Marcellus", serif;
+  font-size: 22px;
+  line-height: 1.6em;
+  color: var(--ba-brown);
+}
+
+@media (max-width: 991px) {
+  .ba-approach-section .col {
+    width: 100%;
+  }
+
+  .ba-approach-section .approach-text {
+    padding: 50px 0 0;
+  }
+
+  .ba-approach-section .approach-text p {
+    font-size: 19px;
+  }
+}
+
+/*--------------------------------------------------------------
+    cta
+--------------------------------------------------------------*/
+.minimal-portfolio-cta {
+  background-color: var(--ba-brown);
+  padding: 70px 0;
+}
+
+.minimal-portfolio-cta .cta-kicker {
+  margin: 0 0 0.9em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ba-bronze);
+}
+
+.minimal-portfolio-cta h2 {
+  color: #fff;
+  font-size: 28px;
+}
+
+.minimal-portfolio-cta p {
+  color: #d9d0c6;
+  margin: 0.8em 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .minimal-portfolio-cta .cta-inner {
+    padding-right: 260px;
+  }
+}
+
+@media (max-width: 991px) {
+  .minimal-portfolio-cta p {
+    margin-bottom: 1.5em;
+  }
+}
+
+.minimal-portfolio-cta .minimal-portfolio-theme-btn-s2 {
+  background-color: var(--ba-whatsapp);
+  padding: 14px 30px;
+}
+
+.minimal-portfolio-cta .minimal-portfolio-theme-btn-s2:hover {
+  background-color: #1eb457;
+}
+
+/*--------------------------------------------------------------
+    contato
+--------------------------------------------------------------*/
+.minimal-portfolio-contact {
+  background-color: var(--ba-cream);
+}
+
+.minimal-portfolio-contact .contact-info {
+  padding-right: 0;
+}
+
+.minimal-portfolio-contact .contact-info ul li {
+  color: var(--ba-brown);
+  padding-left: 62px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.minimal-portfolio-contact .contact-info ul > li + li {
+  margin-top: 26px;
+}
+
+.minimal-portfolio-contact .contact-info a {
+  color: var(--ba-brown);
+  word-break: break-word;
+}
+
+.minimal-portfolio-contact .contact-info a:hover {
+  color: var(--ba-bronze-dark);
+}
+
+.minimal-portfolio-contact .contact-info .icon {
+  top: 0;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--ba-brown);
+  color: #fff;
+  font-size: 19px;
+}
+
+.minimal-portfolio-contact .contact-form input,
+.minimal-portfolio-contact .contact-form textarea {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  border-color: var(--ba-cream-dark);
+  color: var(--ba-brown);
+}
+
+.minimal-portfolio-contact .contact-form input:focus,
+.minimal-portfolio-contact .contact-form textarea:focus {
+  border-color: var(--ba-bronze);
+}
+
+.minimal-portfolio-contact .contact-form .has-error {
+  border-color: #c0392b;
+}
+
+.minimal-portfolio-contact .contact-form textarea {
+  resize: vertical;
+  padding-top: 12px;
+}
+
+.ba-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.minimal-portfolio-contact .submit-btn button[disabled] {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form-status {
+  margin: 18px 0 0;
+  text-align: right;
+  min-height: 1.7em;
+}
+
+.form-status.is-success {
+  color: #2e7d32;
+}
+
+.form-status.is-error {
+  color: #c0392b;
+}
+
+/*--------------------------------------------------------------
+    footer
+--------------------------------------------------------------*/
+.minimal-portfolio-footer {
+  background-color: var(--ba-brown-dark);
+}
+
+.ba-footer-top {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+
+.ba-footer-top .footer-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.ba-footer-top .footer-name {
+  font-family: "Marcellus", serif;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.3em;
+}
+
+.ba-footer-top .footer-role {
+  color: var(--ba-bronze);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 1em;
+}
+
+.ba-footer-top .footer-region {
+  color: #b5aba0;
+  margin: 0;
+}
+
+.minimal-portfolio-footer .copyright-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 0;
+}
+
+.minimal-portfolio-footer .copyright-info p {
+  color: #8f857c;
+  font-size: 13px;
+}
+
+.minimal-portfolio-footer .copyright-info .social-links a {
+  font-size: 18px;
+  color: #b5aba0;
+}
+
+.minimal-portfolio-footer .copyright-info .social-links a:hover {
+  color: #fff;
+}
+
+.minimal-portfolio-footer .copyright-info .social-links > li + li {
+  margin-left: 16px;
+}
+
+@media (max-width: 767px) {
+  .minimal-portfolio-footer .copyright-info {
+    text-align: center;
+  }
+
+  .minimal-portfolio-footer .copyright-info .col {
+    width: 100%;
+  }
+
+  .minimal-portfolio-footer .copyright-info .footer-social,
+  .minimal-portfolio-footer .copyright-info .social-links {
+    float: none;
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
+
+/*--------------------------------------------------------------
+    whatsapp flutuante
+--------------------------------------------------------------*/
+.ba-whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9998;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--ba-whatsapp);
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+}
+
+.ba-whatsapp-float:hover,
+.ba-whatsapp-float:focus {
+  color: #fff;
+  transform: scale(1.08);
+}
+
+@media (max-width: 767px) {
+  .ba-whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 27px;
+  }
+}

@@ -25,9 +25,9 @@ return [
 
     // SMTP da hospedagem (confira os dados no painel da hospedagem).
     // Deixe 'smtp_host' vazio para usar a função mail() do PHP.
-    'smtp_host'   => 'mail.brunaarq.com.br',
-    'smtp_porta'  => 587,
-    'smtp_seguro' => 'tls',   // 'tls' (porta 587), 'ssl' (porta 465) ou '' (sem criptografia)
+    'smtp_host'   => 'brunaarq.com.br',
+    'smtp_porta'  => 465,
+    'smtp_seguro' => 'ssl',   // 'tls' (porta 587), 'ssl' (porta 465) ou '' (sem criptografia)
     'smtp_usuario'=> 'envioautomatico@brunaarq.com.br',
     'smtp_senha'  => 'SENHA_AQUI',
 ];

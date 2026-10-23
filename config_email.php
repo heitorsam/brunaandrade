@@ -26,9 +26,9 @@ return [
     'remetente_nome'  => 'Site Bruna Andrade Arquitetura',
 
     // SMTP da hospedagem (mesma configuração do site anterior, domínio novo)
-    'smtp_host'   => 'mail.brunaarq.com.br',
-    'smtp_porta'  => 587,
-    'smtp_seguro' => 'tls',
+    'smtp_host'   => 'brunaarq.com.br',
+    'smtp_porta'  => 465,
+    'smtp_seguro' => 'ssl',
     'smtp_usuario'=> 'envioautomatico@brunaarq.com.br',
     'smtp_senha'  => 'envioautomatico@99',
 ];

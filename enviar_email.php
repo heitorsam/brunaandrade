@@ -100,9 +100,10 @@ $texto = "Nova mensagem pelo site\n\n"
     . "E-mail: $email\n\n"
     . "Mensagem:\n$mensagem\n";
 
-$mail = new PHPMailer(true);
+function novo_mail($config)
+{
+    $mail = new PHPMailer(true);
 
-try {
     if (!empty($config['smtp_host'])) {
         $mail->isSMTP();
         $mail->Host       = $config['smtp_host'];
@@ -118,6 +119,12 @@ try {
 
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
     $mail->setFrom($config['remetente_email'], $config['remetente_nome']);
+
+    return $mail;
+}
+
+try {
+    $mail = novo_mail($config);
     $mail->addAddress($config['destino_email'], $config['destino_nome']);
     $mail->addReplyTo($email, $nome);
     foreach ($config['bcc'] as $bcc) {
@@ -131,9 +138,47 @@ try {
 
     $mail->send();
 } catch (Exception $e) {
-    error_log('enviar_email.php: ' . $mail->ErrorInfo);
+    error_log('enviar_email.php: ' . $e->getMessage());
     responder(false, 'Não foi possível enviar a mensagem agora. Tente pelo WhatsApp (12) 98142-8757.', 500);
 }
 
 $_SESSION['ba_ultimo_envio'] = time();
+
+// Confirmação para o cliente: curta e sem links. Se falhar, a mensagem
+// para a Bruna já foi entregue, então só registra o erro.
+$primeiro_nome = explode(' ', $nome)[0];
+
+$corpo_cliente = '
+<div style="font-family: Arial, sans-serif; color: #3a332e; max-width: 600px;">
+    <p>Olá, ' . $h($primeiro_nome) . '!</p>
+    <p>Recebi sua mensagem pelo site e retornarei em breve.<br>
+    Se preferir, fale comigo pelo WhatsApp (12) 98142-8757.</p>
+    <p style="border-left: 2px solid #a8876a; padding-left: 12px; color: #6b625a;">
+        <strong>Sua mensagem:</strong><br>' . $h($mensagem) . '
+    </p>
+    <p style="margin-top: 24px;">
+        Bruna Andrade<br>
+        <span style="color: #8f857c;">Arquiteta e Urbanista</span>
+    </p>
+</div>';
+
+$texto_cliente = "Olá, $primeiro_nome!\n\n"
+    . "Recebi sua mensagem pelo site e retornarei em breve.\n"
+    . "Se preferir, fale comigo pelo WhatsApp (12) 98142-8757.\n\n"
+    . "Sua mensagem:\n$mensagem\n\n"
+    . "Bruna Andrade\nArquiteta e Urbanista\n";
+
+try {
+    $confirmacao = novo_mail($config);
+    $confirmacao->addAddress($email, $nome);
+    $confirmacao->addReplyTo($config['destino_email'], $config['destino_nome']);
+    $confirmacao->isHTML(true);
+    $confirmacao->Subject = 'Recebemos sua mensagem - Bruna Arq';
+    $confirmacao->Body    = $corpo_cliente;
+    $confirmacao->AltBody = $texto_cliente;
+    $confirmacao->send();
+} catch (Exception $e) {
+    error_log('enviar_email.php (confirmação): ' . $e->getMessage());
+}
+
 responder(true, 'Mensagem enviada com sucesso! Em breve entrarei em contato.');
